@@ -22,3 +22,7 @@ include Rack::Test::Methods
   end  
   
 
+  it "should return title" do
+	get '/'
+	assert_match "<title> Popularidad Twitter </title>", last_response.body
+  end
