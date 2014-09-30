@@ -12,3 +12,13 @@ include Rack::Test::Methods
 		Sinatra::Application
 	end
 	
+	describe "SYTW P2-Heroku" do
+  
+  #Definir objeto para las pruebas
+
+  it "Should return index" do
+	get '/'
+	assert last_response.ok?
+  end  
+  
+
