@@ -4,9 +4,6 @@ require 'minitest/autorun'
 require 'rack/test'
 require_relative '../twitter.rb'
 
-
-
-
 include Rack::Test::Methods
 	
 	def app
@@ -28,4 +25,11 @@ describe "SYTW Práctica2-Heroku" do
   end
 
 end
+
+it "Debe existir formulario donde preguntar nombre y cantidad de amigos a contar?" do
+	get '/'
+	assert_match "<p ><b>Introduzca su nombre en Twitter: </b></p>", last_response.body
+	assert_match "<p ><b>¿Cuántos seguidores desea ver? </b></p>", last_response.body
+  end
+end  
 	
