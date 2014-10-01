@@ -1,0 +1,79 @@
+
+body 
+{
+ 
+	background-image:url('/img/cielo.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+}
+
+p 
+{
+      color: white;
+      font-size: large;
+      font-family: helvetica;
+}
+#cabecera 
+{
+	background-size:  100%;
+        height: 7em;
+        margin: 0;
+        padding: 0;
+	color: white;
+	height: 100px;
+
+
+}	
+#warning
+{
+
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 0.9em;
+	padding-bottom: 0.9em;
+	color: red;
+}
+#col
+{
+       background-color: #E8E8E8 ;
+       text-align: left;
+       margin-bottom: 1em;
+}
+h1 
+{
+      color: white;
+      font-family: helvetica;
+}
+
+
+
+li 
+{
+      color: white;
+      font-size: large;
+      font-family: helvetica;
+}
+
+
+
+.tabla 
+{
+	background: rgba(46, 51, 56, 0.8);
+	border-radius: 15px;
+	width: 600px;
+}
+
+.formulario 
+{
+	width: 500px;
+}
+
+
+
+
+.pie 
+{
+	padding-top: 5em;
+}
