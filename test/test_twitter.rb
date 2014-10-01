@@ -27,14 +27,4 @@ describe "SYTW Práctica2-Heroku" do
 	assert_match "<title>Popularidad en Twitter</title>", last_response.body
   end
   
-end
-	
-
-  
-
-
-
-	
-
-
 	
