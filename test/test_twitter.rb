@@ -4,7 +4,7 @@ require 'minitest/autorun'
 require 'rack/test'
 require_relative '../twitter.rb'
 
-#require_relative 'twitter.rb'
+
 
 
 include Rack::Test::Methods
@@ -26,5 +26,6 @@ describe "SYTW Práctica2-Heroku" do
 	get '/'
 	assert_match "<title>Popularidad en Twitter</title>", last_response.body
   end
-  
+
+end
 	
