@@ -2,114 +2,45 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<style type="text/css">
-  			p{ 
-				color: black; 
-			 	font-family: Verdana;
-			}
+  		
+		<link rel="stylesheet" href="./css/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="./css/bootswatch.min.css">
+		<link rel="stylesheet" href="./css/estilo.css">
+               <title>Popularidad en Twitter</title>
+       </head>
 
-  			#cabecera{
-				background-color: grey;
-				background-size:  100%;
-				height: 7em;
-			  	margin: 0;
-			  	padding: 0;
-			}
 
-			#cabecera p{
-				color: white;
-				text-align: center;
-				font-size: 2em;
-				line-height: 3.5em;
-			}
+<body>
 
-			#re{
-				padding: 2em 2em 2em 2em;
-				font-family: Arial;
-				margin-top: 4em;
-				margin-left: 6em;
-				margin-bottom: 4em;
-				border: 3px solid gray;
-				width: 25em;
-				float: left;
-				font-size: 1em;
-			}
-			#izquierda{
-				width: 30em; 
-				text-align: center;
-				font-family:Arial;
-				color:black;
-				font-size: 1em;
-				padding: 2em 2em 2em 2em;
-				border: 3px solid gray;
-				float: right;
-				margin-top: 4em;
-				margin-right: 6em; 
-				margin-bottom: 4em;
-			}
-
-			#warning{
-				background-color: #f4b1a9;
-				font-size: 1.5em;
-				color: red;
-				padding-left: 2em;
-				padding-right: 2em;
-				padding-top: 0.9em;
-				padding-bottom: 0.9em;
-
-			}
-
-			#col{
-				background-color: #E8E8E8;
-				text-align: left;
-				margin-bottom: 1em;
-			}	
-		</style>
 		
-		<title>Popularidad Twitter</title>
-	</head>
-	<body style= "background-color: #96ddec;">
-		<div id="cabecera">
-	 			<p><img src="/bird_icon.png" WIDTH=100 HEIGHT=100 />
-	 			<b>Popularidad de amigos en Twitter</b></p>
-	 	</div>
-	 	
-	 	<div id="re">
-		 	<form action="/" method="post">
-		   		<p><b>Nombre de usuario en Twitter: </b></p><input type="text" name="firstname"  value="" autofocus>
-		   		<p><b>¿Cuántos amigos desea ver? </b></p><input type="text" name="n" value="1">
-		   		<input  type="submit" value="Obtener" >
-		 	</form>
-	 	</div>
- 		
- 		<div id="izquierda">
-                       <% if @name == ''%>
-				<p id="warning"> No se ha introducido ningun usuario o es incorrecto </p>
-			<%else%>
-				<p><b> Usuario <i><%= @name %></i></b></p>
-			<%end %>
 
-                       <% if @name != ''%>
-				<%if @number>10%>
-					<p id="warning"> Sólo se puede mostrar hasta 10 amigos </p>
-				<%elsif @amigos_usuario.length <= 0 %>
-					<p id="warning">El usuario no existe o no tiene amigos</p>
-				<%elsif @amigos_usuario.length < @number %>
-					<p id="warning">El usuario tiene menos de <%= @number%> amigos</p>
-					<ol>
-						<% @amigos_usuario.each do |i| %> 
-							<li id="col"><%= i %><br></li>
-						<% end %>
-					</ol>
-				<%else%>
-					<p>Amigos :</p>
-					<ol>
-						<% @amigos_usuario.each do |i| %> 
-							<li id="col"><%= i %><br></li>
-						<% end %>
-					</ol>
-				<%end%>
-			<%end%>
-		</div>	
-	</body>
-</html>
+		<!--  *****   Cabecera *****  -->
+                       <div class="container">
+					<div class="cabecera" ALIGN=center>
+					<h1>Amigos Mas Populares en Twitter</h1>
+					<p><img src="/bird_icon.png" WIDTH=150 HEIGHT=150 />	
+					</div>
+
+
+		
+	<!--  *****   Central *****  -->
+			<div class="row">
+				<!--  Menu  -->
+				<div class="col-md-2">
+				
+				</div>
+				<div class="col-md-10">
+				  <div style="text-align:center;">
+					<div class ="tabla">
+					<table class="table table-hover">
+						<form action="/" method="post">
+							<p ><b>Introduzca su nombre en Twitter: </b></p><input type="text" name="firstname"  value="" autofocus>
+							<br>
+							<p ><b>¿Cuántos seguidores desea ver? </b></p><input type="text" name="n" value="1">
+							<br>
+							<br>
+							<input  type="submit" value="Generar" >
+						</form>												
+					</table>
+					</div>
+				</div>
