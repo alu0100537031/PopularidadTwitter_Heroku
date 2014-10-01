@@ -2,8 +2,8 @@ ENV['RACK_ENV'] = 'test'
 
 require 'minitest/autorun'
 require 'rack/test'
-#require_relative '../twitter.rb'
-require_relative 'twitter.rb'
+require_relative '../twitter.rb'
+#require_relative 'twitter.rb'
 
 
 include Rack::Test::Methods
@@ -12,9 +12,8 @@ include Rack::Test::Methods
 		Sinatra::Application
 	end
 	
-	describe "SYTW P2-Heroku" do
+describe "SYTW Práctica2-Heroku" do
   
-  #Definir objeto para las pruebas
 
   it "Should return index" do
 	get '/'
@@ -26,3 +25,9 @@ include Rack::Test::Methods
 	get '/'
 	assert_match "<title> Popularidad Twitter </title>", last_response.body
   end
+  
+end
+	
+	
+	
+	
