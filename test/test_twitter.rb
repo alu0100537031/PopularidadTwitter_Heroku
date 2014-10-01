@@ -15,18 +15,24 @@ include Rack::Test::Methods
 describe "SYTW Práctica2-Heroku" do
   
 
-  it "Should return index" do
+  it "Debe cargar el index " do
 	get '/'
 	assert last_response.ok?
   end  
   
 
-  it "should return title" do
+  it "Debe mostrar el titulo de la pagina" do
 	get '/'
 	assert_match "<title> Popularidad Twitter </title>", last_response.body
   end
   
 end
+
+   it "Debe cargar el formulario" do
+	get '/'
+	assert_match "<p ><b>Introduzca su nombre en Twitter: </b></p>", last_response.body
+	assert_match "<p ><b>¿Cuántos seguidores desea ver? </b></p>", last_response.body
+  end
 	
 	
 	
