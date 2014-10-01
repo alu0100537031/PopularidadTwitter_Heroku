@@ -26,11 +26,11 @@ describe "SYTW Práctica2-Heroku" do
 	assert_match "<title> Popularidad Twitter </title>", last_response.body
   end
   
-
-
-
-	
-
+  it "Debe cargar el formulario" do
+	get '/'
+	assert_match "<p ><b>Introduzca su nombre en Twitter: </b></p>", last_response.body
+	assert_match "<p ><b>¿Cuántos seguidores desea ver? </b></p>", last_response.body
+ end
 
 end
 	
