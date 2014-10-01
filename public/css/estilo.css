@@ -2,7 +2,7 @@
 body 
 {
  
-	background-image:url('/img/cielo.jpg');
+	background-image:url('/img/img01.jpg');
 	background-size: cover;
 	-moz-background-size: cover;
 	-webkit-background-size: cover;
@@ -15,9 +15,16 @@ p
       font-size: large;
       font-family: helvetica;
 }
+
+p1 
+{
+      color: red;
+      font-size: large;
+      font-family: helvetica;
+}
 #cabecera 
 {
-	background-size:  100%;
+	background-color:black;	
         height: 7em;
         margin: 0;
         padding: 0;
@@ -26,18 +33,35 @@ p
 
 
 }	
+#izquierda
+{
+        width: 30em;
+        text-align: center;
+        font-family:Arial;
+        color:black;
+        font-size: 1em;
+        padding: 2em 2em 2em 2em;
+        border: 3px solid yellow;
+        float: center;
+        margin-top: 4em;
+        margin-right: 6em;
+        margin-bottom: 4em;
+}
+
 #warning
 {
-
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-top: 0.9em;
-	padding-bottom: 0.9em;
-	color: red;
+        background-color: #FFCC66;
+        font-size: 1.5em;
+        color: red;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.9em;
+        padding-bottom: 0.9em;
 }
+
 #col
 {
-       background-color: #E8E8E8 ;
+       background-color: #CF8080 ;
        text-align: left;
        margin-bottom: 1em;
 }
@@ -60,7 +84,7 @@ li
 
 .tabla 
 {
-	background: rgba(46, 51, 56, 0.8);
+	background-color: black;
 	border-radius: 15px;
 	width: 600px;
 }
@@ -73,7 +97,8 @@ li
 
 
 
-.pie 
+#pie 
 {
 	padding-top: 5em;
+	float:left;
 }
