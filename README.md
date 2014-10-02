@@ -1,12 +1,11 @@
 ### Sistemas y Tecnologías Web:
-##Práctica: Aplicación Web con Sinatra: Contar la Popularidad de Nuestros Amigos en Twitter
-##Autor: Rushil Lakhani Lakhani
+##Práctica2: Despliegue en Heroku
+##Autor: Rushil Lakhani Lakhani y Adan Rafael Lopez Lecuona
 
 Objetivo
 -----
 
-Acceder a Twitter con  una aplicación Sinatra que muestre en una página los amigos más populares de un usuario 
-cualquiera, siguiendo el criterio del numero de seguidores.
+Desplegar la aplicación ya realizada en la práctica anterior en Heroku incluyendo algunos tests.
 
 ## Instalación
 --------------
@@ -22,6 +21,19 @@ cualquiera, siguiendo el criterio del numero de seguidores.
 Podemos ejecutarlo de dos formas:
 
 1. Ejecutando el comando`ruby twitter.rb`
-2. Ir a la dirección http://localhost:4567/ para poder usar la aplicación
+2. Mediante el comado `rake`
 
+
+### Test
+------------
+
+Para iniciar las pruebas de test
+
+1. Ejecutamos el comando `rake test`
+
+
+### Implantación en Heroku
+--------------------------
+La aplicación se encuentra funcionando en Heroku en la dirección:
+[http://popularidadtwitter.herokuapp.com/](http://popularidadtwitter.herokuapp.com/)
 
