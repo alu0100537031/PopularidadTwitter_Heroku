@@ -38,5 +38,10 @@ describe "SYTW Práctica2-Heroku" do
 		assert_match '<img src="/bird_icon.png" WIDTH=150 HEIGHT=150 />', last_response.body
   end
   
+   it "Debe mostrar el pie de la pagina" do
+	get '/'
+	assert_match " <p1> <b>© SYTW  </b> Práctica 2 © Realizado por: <b>Rushil Lakhani Lakhani y Adan Rafael Lopez Lecuona.</b></p1>", last_response.body
+  end
+  
 end  
 	
