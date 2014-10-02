@@ -2,6 +2,21 @@ require 'twitter'
 require 'sinatra'
 require './configure'
 
+class Amigos_Twitter # Clase utilizada para realizar alguna de las pruebas unitarias
+  
+  
+  def t_usuario(client, name)
+	return client.user? name
+  end
+
+  
+  def t_amigos (client, name)
+	client = my_twitter_client()
+	return client.friends(name,{})
+  end
+  
+end
+
 # Inicializamos las variables
 get '/' do
   @amigos_usuario = []
