@@ -12,6 +12,13 @@ include Rack::Test::Methods
 	
 describe "SYTW Práctica2-Heroku" do
   
+  before :all do
+                @usuario_twitter = Amigos_Twitter.new
+                @client = my_twitter_client()
+                @name1 = "rushilito"
+                @name2 = "kljk"
+        end
+  
 
   it "Debe cargar el index " do
 	get '/'
@@ -42,6 +49,12 @@ describe "SYTW Práctica2-Heroku" do
 	get '/'
 	assert_match " <p1> <b>© SYTW  </b> Práctica 2 © Realizado por: <b>Rushil Lakhani Lakhani y Adan Rafael Lopez Lecuona.</b></p1>", last_response.body
   end
+  
+   it "Debe existir el usuario " do
+	assert @usuario_twitter.t_usuario(@client,@name1)
+  end
+  
+  
   
 end  
 	
