@@ -8,12 +8,6 @@ class Amigos_Twitter # Clase utilizada para realizar alguna de las pruebas unita
   def t_usuario(client, name)
 	return client.user? name
   end
-
-  
-  def t_amigos (client, name)
-	client = my_twitter_client()
-	return client.friends(name,{})
-  end
   
 end
 
