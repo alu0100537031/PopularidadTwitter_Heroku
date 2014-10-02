@@ -26,10 +26,17 @@ describe "SYTW Práctica2-Heroku" do
 
 
 
-it "Debe existir formulario donde preguntar nombre y cantidad de amigos a contar?" do
+  it "Debe existir formulario donde preguntar nombre y cantidad de amigos a contar?" do
 	get '/'
 	assert_match "<p ><b>Introduzca su nombre en Twitter: </b></p>", last_response.body
 	assert_match "<p ><b>¿Cuántos seguidores desea ver? </b></p>", last_response.body
   end
+ 
+
+  it "Debe cargar la imagen del pajarito" do
+		get '/'
+		assert_match '<img src="/bird_icon.png" WIDTH=150 HEIGHT=150 />', last_response.body
+  end
+  
 end  
 	
