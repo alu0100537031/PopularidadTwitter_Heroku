@@ -16,7 +16,7 @@ describe "SYTW Práctica2-Heroku" do
                 @usuario_twitter = Amigos_Twitter.new
                 @client = my_twitter_client()
                 @name1 = "rushilito"
-                @name2 = "kljk"
+                @name2 = "fsdkhfsd"
         end
   
 
@@ -52,6 +52,10 @@ describe "SYTW Práctica2-Heroku" do
   
    it "Debe existir el usuario " do
 	assert @usuario_twitter.t_usuario(@client,@name1)
+  end
+  
+  it " No Debe existir el usuario " do
+	refute @usuario_twitter.t_usuario(@client, @name2)
   end
   
   
